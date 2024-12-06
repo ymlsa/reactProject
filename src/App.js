@@ -19,12 +19,15 @@ function App() {
     });
   };
 
-
-  const handleSubmit = characters => setState({characters:[...state.characters,characters]})
+  const handleSubmit = (characters) =>
+    setState({ characters: [...state.characters, characters] });
 
   return (
     <div className="container">
-      <Table characterData={state.characters} removeCharacter={removeCharacter} />
+      <Table
+        characterData={state.characters}
+        removeCharacter={removeCharacter}
+      />
       <Form handleSubmit={handleSubmit} />
     </div>
   );

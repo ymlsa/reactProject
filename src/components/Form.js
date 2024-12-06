@@ -10,18 +10,17 @@ function Form(props) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setState({
-        ...state,
+      ...state,
       [name]: value,
     });
   };
 
   const { name, job } = state;
 
-  const submitForm = ()=>{
-    props.handleSubmit(state)
-    setState(initialState)
-  }
-
+  const submitForm = () => {
+    props.handleSubmit(state);
+    setState(initialState);
+  };
 
   return (
     <form>
